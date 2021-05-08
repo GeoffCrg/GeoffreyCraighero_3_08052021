@@ -1,0 +1,451 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(/fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "robotomedium";
+  src: url("Roboto-Medium-webfont.eot");
+  src: url("Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Medium-webfont.woff2") format("woff2"), url("Roboto-Medium-webfont.woff") format("woff"), url("Roboto-Medium-webfont.ttf") format("truetype"), url("Roboto-Medium-webfont.svg#robotomedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+p,
+h1,
+h2,
+h3,
+button,
+a {
+  font-family: "robotomedium";
+}
+
+body {
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+  padding-left: 10px;
+  text-decoration: underline green;
+}
+
+p {
+  font-size: 1em;
+}
+
+.Restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: whitesmoke;
+  padding-top: 20px;
+}
+
+.resto {
+  margin: 20px 30px;
+  font-size: 1.9em;
+  background: whitesmoke;
+  padding-top: 20px;
+}
+
+section {
+  background: whitesmoke;
+}
+
+.menu_card {
+  display: flex;
+  width: 90%;
+  height: 250px;
+  border: solid white 1px;
+  border-radius: 1em;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  position: relative;
+  background: white;
+}
+.menu_card a {
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.menu_card a img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 1em 1em 0em 0em;
+}
+.menu_card a h3 {
+  margin: 10px 10px;
+}
+.menu_card a p {
+  margin: 10px 10px;
+}
+.menu_card a button {
+  background-color: #a3d4b0;
+  border: transparent;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  padding: 3px 6px;
+  font-weight: 600;
+  color: cornflowerblue;
+  border-radius: 0.3em;
+}
+.menu_card a .far {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 2em;
+}
+
+.menu {
+  position: relative;
+}
+.menu .fas {
+  position: absolute;
+  font-size: 1.5em;
+  top: 25px;
+  left: 20px;
+}
+.menu .banner img {
+  width: 100%;
+  height: 300px;
+}
+
+.select_menu_card {
+  display: flex;
+  height: 1000px;
+  flex-direction: column;
+}
+.select_menu_card .appetizer {
+  display: flex;
+  height: 280px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.select_menu_card .appetizer button {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 70px;
+  border-radius: 1.6em;
+  border: transparent;
+  align-self: center;
+  font-size: 1.2em;
+  position: relative;
+}
+.select_menu_card .appetizer button .title_meal {
+  margin: 5px 10px;
+  font-weight: bold;
+}
+.select_menu_card .appetizer button .meal_desc {
+  font-size: 0.8;
+  margin: 5px 10px;
+}
+.select_menu_card .appetizer button .price {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+.select_menu_card .meal {
+  display: flex;
+  height: 280px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.select_menu_card .meal button {
+  display: flex;
+  width: 90%;
+  height: 70px;
+  border-radius: 1.6em;
+  border: transparent;
+  align-self: center;
+}
+.select_menu_card .dessert {
+  display: flex;
+  height: 280px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.select_menu_card .dessert button {
+  display: flex;
+  width: 90%;
+  height: 70px;
+  border-radius: 1.6em;
+  border: transparent;
+  align-self: center;
+}
+.select_menu_card .order_btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.select_menu_card .order_btn button {
+  display: flex;
+  width: 50%;
+  height: 60px;
+  border-radius: 1.6em;
+  border: transparent;
+  align-self: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #9356dc;
+  color: whitesmoke;
+  font-size: 1.3em;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.logo img {
+  width: 50%;
+}
+
+.location {
+  background: #d4cece;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.location .fas {
+  padding: 0 12px;
+}
+.location p {
+  font-size: 1.2em;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  background: #f1eded;
+}
+.presentation .catchword {
+  height: 70px;
+  font-size: 1.7em;
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 900;
+}
+.presentation .catchword_description {
+  font-size: 1.4em;
+  font-weight: 200;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.presentation button {
+  align-self: center;
+  height: 40px;
+  width: 220px;
+  margin-bottom: 50px;
+  border-radius: 1.5em;
+  color: whitesmoke;
+  background: #9356dc;
+  border: transparent;
+}
+
+.operation {
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background: white;
+}
+.operation h2 {
+  font-size: 1.8em;
+  margin: 25px;
+}
+.operation .order_operation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+.operation .order_operation button {
+  width: 80%;
+  height: 60px;
+  border-radius: 1.5em;
+  border: transparent;
+  align-self: center;
+  margin-bottom: 50px;
+  font-size: 1.2em;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.operation .order_operation button .fas {
+  padding: 0 10px;
+}
+.operation .order_operation button::before {
+  content: "1";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 1px;
+  border-radius: 2em;
+  background: purple;
+}
+
+footer {
+  height: 200px;
+  background: #49464f;
+  display: flex;
+  flex-direction: column;
+}
+footer h3 {
+  color: honeydew;
+  font-weight: 800;
+  margin: 0.8em 0.8em;
+}
+footer li {
+  color: honeydew;
+  margin: 0.7em 0.8em;
+  font-size: 1.1em;
+}
+
+/*# sourceMappingURL=style.css.map */

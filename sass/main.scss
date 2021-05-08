@@ -1,0 +1,113 @@
+@import "./base/_reset.scss";
+@import "./base/_fonts.scss";
+@import "./base/_base.scss";
+@import "./utils/_variables.scss";
+@import "./layouts/_menu-cards.scss";
+@import "./page/_menu.scss";
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  img {
+    width: 50%;
+  }
+}
+.location {
+  background: rgb(212, 206, 206);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  .fas {
+    padding: 0 12px;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  background: rgb(241, 237, 237);
+  .catchword {
+    height: 70px;
+    font-size: 1.7em;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 900;
+  }
+  .catchword_description {
+    font-size: 1.4em;
+    font-weight: 200;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  button {
+    align-self: center;
+    height: 40px;
+    width: 220px;
+    margin-bottom: 50px;
+    border-radius: 1.5em;
+    color: whitesmoke;
+    background: $color-primary;
+    border: transparent;
+  }
+}
+.operation {
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background: white;
+  h2 {
+    font-size: 1.8em;
+    margin: 25px;
+  }
+  .order_operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    button {
+      width: 80%;
+      height: 60px;
+      border-radius: 1.5em;
+      border: transparent;
+      align-self: center;
+      margin-bottom: 50px;
+      font-size: 1.2em;
+      @include box_shadow;
+      position: relative;
+      .fas {
+        padding: 0 10px;
+      }
+    }
+    button::before {
+      content: "1";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: 1px;
+      border-radius: 2em;
+      background-color: $color-primary;
+    }
+  }
+}
+
+footer {
+  height: 200px;
+  background: #49464f;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    color: honeydew;
+    font-weight: 800;
+    margin: 0.8em 0.8em;
+  }
+  li {
+    color: honeydew;
+    margin: 0.7em 0.8em;
+    font-size: 1.1em;
+  }
+}
