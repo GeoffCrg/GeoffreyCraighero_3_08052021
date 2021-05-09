@@ -4,6 +4,7 @@
 @import "./utils/_variables.scss";
 @import "./layouts/_menu-cards.scss";
 @import "./page/_menu.scss";
+@import "./_media-queries.scss";
 
 .logo {
   display: flex;
@@ -44,13 +45,15 @@
     text-align: center;
   }
   button {
+    background-image: linear-gradient(
+      (60deg, $color-primary, $color-secondary)
+    );
     align-self: center;
     height: 40px;
     width: 220px;
     margin-bottom: 50px;
     border-radius: 1.5em;
     color: whitesmoke;
-    background: $color-primary;
     border: transparent;
   }
 }
