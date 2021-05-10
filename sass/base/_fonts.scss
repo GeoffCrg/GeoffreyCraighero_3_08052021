@@ -3,7 +3,7 @@
   src: url(/fonts/Roboto/Roboto-Medium.ttf);
 }
 @font-face {
-  font-family: "robotomedium";
+  font-family: "roboto";
   src: url("Roboto-Medium-webfont.eot");
   src: url("Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"),
     url("Roboto-Medium-webfont.woff2") format("woff2"),
@@ -19,5 +19,5 @@ h2,
 h3,
 button,
 a {
-  font-family: "robotomedium";
+  font-family: "roboto";
 }

@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   height: 280px;
-  background: rgb(241, 237, 237);
+  background: rgb(241, 237, 236);
   .catchword {
     height: 70px;
     font-size: 1.7em;
@@ -109,8 +109,14 @@ footer {
     margin: 0.8em 0.8em;
   }
   li {
-    color: honeydew;
     margin: 0.7em 0.8em;
     font-size: 1.1em;
+    a {
+      text-decoration: none;
+      color: honeydew;
+      .fas {
+        margin-right: 5px;
+      }
+    }
   }
 }
