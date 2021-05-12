@@ -2,8 +2,6 @@ body {
   margin: auto;
   max-width: 1400px;
 }
-h1 {
-}
 
 h2 {
   font-size: 1.8em;
@@ -14,7 +12,13 @@ h3 {
 h4 {
   font-size: 1.3em;
   padding-left: 10px;
-  text-decoration: underline green;
+}
+h4::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background:  #99e2d0;
 }
 p {
   font-size: 1em;

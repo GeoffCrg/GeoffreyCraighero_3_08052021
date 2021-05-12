@@ -167,8 +167,14 @@ h3 {
 h4 {
   font-size: 1.3em;
   padding-left: 10px;
-  -webkit-text-decoration: underline green;
-          text-decoration: underline green;
+}
+
+h4::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #99e2d0;
 }
 
 p {
@@ -285,9 +291,29 @@ section {
   left: 20px;
 }
 
-.menu .banner img {
+.banner img {
   width: 100%;
   height: 300px;
+}
+
+.select_menu {
+  margin-top: -5rem;
+  padding-top: 0.8em;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+  z-index: 1;
+  position: relative;
+}
+
+.select_menu h2 {
+  margin: 1em 1em;
+}
+
+.select_menu .far {
+  position: absolute;
+  top: 1.8em;
+  right: 1em;
+  font-size: 1.5em;
 }
 
 .select_menu_card {
@@ -313,6 +339,27 @@ section {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 20px;
+}
+
+.select_menu_card .appetizer .btn-delay0 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 00ms;
+          animation-delay: 00ms;
+}
+
+.select_menu_card .appetizer .btn-delay1 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.select_menu_card .appetizer .btn-delay2 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .select_menu_card .appetizer button {
@@ -363,16 +410,151 @@ section {
   margin-bottom: 20px;
 }
 
+.select_menu_card .meal .btn-delay0 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 00ms;
+          animation-delay: 00ms;
+}
+
+.select_menu_card .meal .btn-delay1 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.select_menu_card .meal .btn-delay2 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
 .select_menu_card .meal button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   width: 90%;
   height: 70px;
   border-radius: 1.6em;
   border: transparent;
   -ms-flex-item-align: center;
       align-self: center;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.select_menu_card .meal button .menuItem-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+.select_menu_card .meal button .menuItem-header .title_meal {
+  margin: 5px 10px;
+  text-align: start;
+  font-weight: bold;
+}
+
+.select_menu_card .meal button .menuItem-header .meal_desc {
+  font-size: 0.8;
+  text-align: start;
+  margin: 5px 15px;
+}
+
+.select_menu_card .meal button .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  justify-self: flex-end;
+}
+
+.select_menu_card .meal button .confirmation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 80px;
+  position: absolute;
+  right: -5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #99e2d0;
+}
+
+.select_menu_card .meal button .confirmation .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  margin: 20px 20px;
+  font-size: 1.5em;
+}
+
+.select_menu_card .meal button .confirmation .fa-check-circle {
+  width: 30px;
+  height: 30px;
+}
+
+.select_menu_card .meal button:hover .price {
+  -webkit-transform: translate(-250%);
+          transform: translate(-250%);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.select_menu_card .meal button:hover .confirmation {
+  height: 70px;
+  display: block;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.select_menu_card .meal button:hover .confirmation .check {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.select_menu_card .meal button:hover .confirmation .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  height: 30px;
+  width: 30px;
+  color: white;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
 }
 
 .select_menu_card .dessert {
@@ -387,6 +569,28 @@ section {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.select_menu_card .dessert .btn-delay0 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 00ms;
+          animation-delay: 00ms;
+}
+
+.select_menu_card .dessert .btn-delay1 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.select_menu_card .dessert .btn-delay2 {
+  -webkit-animation: menu-slide-down 500ms;
+          animation: menu-slide-down 500ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .select_menu_card .dessert button {
@@ -396,12 +600,34 @@ section {
   width: 90%;
   height: 70px;
   border-radius: 1.6em;
+  font-size: 1.2em;
   border: transparent;
   -ms-flex-item-align: center;
       align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
 }
 
-.select_menu_card .order_btn {
+.select_menu_card .dessert button .title_meal {
+  margin: 5px 10px;
+  font-weight: bold;
+}
+
+.select_menu_card .dessert button .meal_desc {
+  font-size: 0.8;
+  margin: 5px 10px;
+}
+
+.select_menu_card .dessert button .price {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.order_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,7 +637,7 @@ section {
   width: 100%;
 }
 
-.select_menu_card .order_btn button {
+.order_btn button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,6 +657,14 @@ section {
   background: #9356dc;
   color: whitesmoke;
   font-size: 1.3em;
+}
+
+.title_meal {
+  font-size: 16px;
+}
+
+.meal_desc {
+  font-size: 16px;
 }
 
 @media screen and (min-width: 850px) and (max-width: 1100px) {
@@ -503,6 +737,50 @@ section {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@-webkit-keyframes checked-slide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes checked-slide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes menu-slide-down {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes menu-slide-down {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
