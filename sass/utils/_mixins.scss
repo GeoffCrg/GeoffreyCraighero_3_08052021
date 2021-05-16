@@ -1,4 +1,5 @@
-@mixin order_button {
-  background-image: linear-gradient((60deg, $color-primary, $color-secondary));
-  box-shadow: 3px 3px 3px 2px rgba(32, 32, 32, 0.2);
+@mixin lighten-btn($color: $color-primary $color-secondary) {
+  filter: brightness(100%);
+  transform: scale(1.1);
+  box-shadow: 6px 6px 6px 6px rgba (32, 32, 32, 0.2);
 }

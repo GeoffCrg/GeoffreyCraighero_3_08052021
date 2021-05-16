@@ -9,6 +9,18 @@
       }
     }
   }
+
+  // menu.scss
+  .banner {
+    img {
+      height: 400px;
+    }
+  }
+  .menu_part {
+    button {
+      max-width: 600px;
+    }
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -57,5 +69,29 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  // menu.scss
+  .banner {
+    img {
+      height: 700px;
+    }
+  }
+  .select_menu_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 700px;
+    justify-content: space-around;
+    .menu_part {
+      width: 30%;
+      height: 70%;
+      border: 0.6em double $color-primary;
+      border-radius: 1.5em;
+    }
+  }
+  .order_btn {
+    button {
+      max-width: 400px;
+    }
   }
 }

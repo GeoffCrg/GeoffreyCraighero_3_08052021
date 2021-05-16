@@ -1,10 +1,15 @@
 .menu {
   position: relative;
-  .fas {
-    position: absolute;
-    font-size: 1.5em;
-    top: 25px;
-    left: 20px;
+  display: flex;
+
+  a {
+    .fas {
+      position: absolute;
+      font-size: 1.5em;
+      top: 25px;
+      left: 20px;
+      color: black;
+    }
   }
 }
 .banner {
@@ -20,132 +25,117 @@
   border-radius: 2rem 2rem 0 0;
   z-index: 1;
   position: relative;
+
   h2 {
     margin: 1em 1em;
   }
   .far {
     position: absolute;
-    top: 1.8em;
-    right: 1em;
-    font-size: 1.5em;
+    top: 40px;
+    right: 30px;
+    font-size: 2em;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+  .fas {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    color: $color-primary;
+    font-size: 2em;
+    opacity: 0;
+    transform: scale(1);
+    transition: transform 600ms ease-in-out;
+
+    &:hover {
+      opacity: 1;
+
+      transform: scale(1.15);
+    }
+  }
+  button {
+    background: white;
   }
 }
-.select_menu_card {
+
+.menu_part {
   display: flex;
-  height: 1000px;
+  height: 280px;
   flex-direction: column;
+  justify-content: space-around;
+  max-width: 700px;
 
-  .menu_part {
-    display: flex;
-    height: 280px;
-    flex-direction: column;
-    justify-content: space-around;
-
-    margin-bottom: 20px;
-    .btn-delay0 {
-      animation: menu-slide-down 500ms;
-      animation-delay: 00ms;
-    }
-    .btn-delay1 {
-      animation: menu-slide-down 500ms;
-      animation-delay: 200ms;
-    }
-    .btn-delay2 {
-      animation: menu-slide-down 500ms;
-      animation-delay: 400ms;
-    }
-
-    button {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      height: 70px;
-      border-radius: 1.6em;
-      border: transparent;
-      align-self: center;
-      font-size: 1.2em;
-      position: relative;
-
-      .title_meal {
-        margin: 5px 10px;
-        font-weight: bold;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-size: 16px;
-      }
-      .meal_desc {
-        font-size: 0.8;
-        margin: 5px 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      .price {
-        position: absolute;
-        right: 20px;
-        bottom: 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-    }
+  h4 {
+    color: grey;
   }
-  .menu_part {
+  margin-bottom: 20px;
+  .btn-delay0 {
+    animation: menu-slide-down 500ms;
+    animation-delay: 00ms;
+  }
+  .btn-delay1 {
+    animation: menu-slide-down 500ms;
+    animation-delay: 200ms;
+  }
+  .btn-delay2 {
+    animation: menu-slide-down 500ms;
+    animation-delay: 400ms;
+  }
+  button {
     display: flex;
-    height: 280px;
+    width: 90%;
+    height: 70px;
+    border-radius: 1em;
+    font-size: 1.2em;
+    border: transparent;
+    align-self: center;
     flex-direction: column;
-    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+    margin-top: 15px;
 
-    margin-bottom: 20px;
-    .btn-delay0 {
-      animation: menu-slide-down 500ms;
-      animation-delay: 00ms;
+    &:hover {
     }
-    .btn-delay1 {
-      animation: menu-slide-down 500ms;
-      animation-delay: 200ms;
-    }
-    .btn-delay2 {
-      animation: menu-slide-down 500ms;
-      animation-delay: 400ms;
-    }
-    button {
+    .menuItem-header {
       display: flex;
-      width: 90%;
-      height: 70px;
-      border-radius: 1.6em;
-      font-size: 1.2em;
-      border: transparent;
-      align-self: center;
       flex-direction: column;
-      position: relative;
-      .menuItem-header {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-      }
-      .title_meal {
-        margin: 5px 10px;
-        font-weight: bold;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      .meal_desc {
-        font-size: 16px;
-        margin: 5px 10px;
-        text-align: start;
-        font-weight: bold;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
+      width: 90%;
+      margin-left: 8px;
+    }
+    .title_meal {
+      margin: 5px 5px 5px 2px;
+      font-weight: 900;
+      font-size: 18px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-align: start;
+      line-height: 1;
+    }
+    .meal_desc {
+      font-size: 14px;
+      margin: 5px 0px 5px 0;
+      text-align: start;
+      font-weight: bold;
 
-      .price {
-        position: absolute;
-        right: 20px;
-        bottom: 10px;
-        display: flex;
-        justify-items: flex-end;
-        align-items: flex-end;
-        justify-self: flex-end;
-      }
+      overflow: hidden;
+      color: grey;
+    }
+
+    .price {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      display: flex;
+      justify-items: flex-end;
+      align-items: flex-end;
+      justify-self: flex-end;
+      font-weight: 900;
+
+      background: white;
     }
 
     .confirmation {
@@ -157,12 +147,12 @@
       justify-content: center;
       align-content: center;
       background-color: $color-tertiary;
-
+      .check {
+      }
       .fas {
         display: flex;
 
         color: white;
-        margin: 20px 20px;
 
         font-size: 1.5em;
       }
@@ -172,6 +162,11 @@
       }
     }
     &:hover {
+      .menuItem-header {
+        width: 70%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
       .price {
         transform: translate(-250%);
         transition: transform 500ms;
@@ -214,13 +209,22 @@
     border-radius: 1.6em;
     border: transparent;
     align-self: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     justify-content: center;
     align-items: center;
-
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    background-image: linear-gradient(
+      (60deg, $color-primary, $color-secondary)
+    );
+    filter: brightness(95%);
     color: whitesmoke;
     font-size: 1.3em;
-    @include order_button;
+    box-shadow: $box-shadow;
+    &:hover {
+      @include lighten-btn;
+    }
   }
 }
 footer {
