@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 html,
 body,
 div,
@@ -129,22 +130,17 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "roboto-medium";
-  src: url("Roboto-Medium-webfont.eot");
-  src: url("Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("") format("woff2"), url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff") format("woff"), url("/Roboto-Medium-webfont.ttf") format("truetype"), url("Roboto-Medium-webfont.svg#robotomedium") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
 p,
-h1,
 h2,
 h3,
 h4,
 button,
 a {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 body {
@@ -152,7 +148,7 @@ body {
   max-width: 1900px;
 }
 
-h2 {
+h1 {
   font-size: 1.8em;
 }
 
@@ -726,6 +722,10 @@ footer li a .fas {
   height: 300px;
 }
 
+.header_title {
+  margin: 20px 10px;
+}
+
 .select_menu {
   margin-top: -5rem;
   padding-top: 0.8em;
@@ -760,7 +760,7 @@ footer li a .fas {
 .select_menu .fas {
   position: absolute;
   top: 40px;
-  right: 30px;
+  right: 29px;
   color: #9356dc;
   font-size: 2em;
   opacity: 0;
@@ -858,8 +858,8 @@ footer li a .fas {
 
 .menu_part button .title_meal {
   margin: 5px 5px 5px 2px;
-  font-weight: 900;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
   text-align: start;
@@ -867,10 +867,11 @@ footer li a .fas {
 }
 
 .menu_part button .meal_desc {
-  font-size: 14px;
+  font-size: 13px;
   margin: 5px 0px 5px 0;
   text-align: start;
-  font-weight: bold;
+  font-weight: 400;
+  text-overflow: ellipsis;
   overflow: hidden;
   color: grey;
 }
@@ -882,12 +883,14 @@ footer li a .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   justify-items: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   justify-self: flex-end;
-  font-weight: 900;
+  font-weight: 700;
+  margin-left: 5px;
   background: white;
 }
 
@@ -898,12 +901,8 @@ footer li a .fas {
   height: 100%;
   width: 80px;
   position: absolute;
-  right: -5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  top: 0;
+  right: -80px;
   background-color: #99e2d0;
 }
 
@@ -911,7 +910,18 @@ footer li a .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
+  top: 20px;
+  right: 30px;
   color: white;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 600ms ease;
+  transition: -webkit-transform 600ms ease;
+  transition: transform 600ms ease;
+  transition: transform 600ms ease, -webkit-transform 600ms ease;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
   font-size: 1.5em;
 }
 
@@ -947,8 +957,8 @@ footer li a .fas {
 }
 
 .menu_part button:hover .confirmation .check {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -958,19 +968,8 @@ footer li a .fas {
 }
 
 .menu_part button:hover .confirmation .fas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: transparent;
-  height: 30px;
-  width: 30px;
-  color: white;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
-  -webkit-transition: 1000ms;
-  transition: 1000ms;
 }
 
 .order_btn {

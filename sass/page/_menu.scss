@@ -18,6 +18,9 @@
     height: 300px;
   }
 }
+.header_title {
+  margin: 20px 10px;
+}
 .select_menu {
   margin-top: -5rem;
   padding-top: 0.8em;
@@ -43,7 +46,7 @@
   .fas {
     position: absolute;
     top: 40px;
-    right: 30px;
+    right: 29px;
     color: $color-primary;
     font-size: 2em;
     opacity: 0;
@@ -108,19 +111,19 @@
     }
     .title_meal {
       margin: 5px 5px 5px 2px;
-      font-weight: 900;
-      font-size: 18px;
+      font-weight: 700;
+      font-size: 16px;
       text-overflow: ellipsis;
       overflow: hidden;
       text-align: start;
       line-height: 1;
     }
     .meal_desc {
-      font-size: 14px;
+      font-size: 13px;
       margin: 5px 0px 5px 0;
       text-align: start;
-      font-weight: bold;
-
+      font-weight: 400;
+      text-overflow: ellipsis;
       overflow: hidden;
       color: grey;
     }
@@ -130,11 +133,12 @@
       right: 20px;
       bottom: 10px;
       display: flex;
+      height: 100%;
       justify-items: flex-end;
       align-items: flex-end;
       justify-self: flex-end;
-      font-weight: 900;
-
+      font-weight: 700;
+      margin-left: 5px;
       background: white;
     }
 
@@ -143,16 +147,21 @@
       height: 100%;
       width: 80px;
       position: absolute;
-      right: -5rem;
-      justify-content: center;
-      align-content: center;
+      top: 0;
+      right: -80px;
+
       background-color: $color-tertiary;
       .check {
       }
       .fas {
         display: flex;
-
+        opacity: 1;
+        top: 20px;
+        right: 30px;
         color: white;
+        transform: rotate(0);
+        transition: transform 600ms ease;
+        transition-delay: 100ms;
 
         font-size: 1.5em;
       }
@@ -177,21 +186,14 @@
         transform: translateX(-100%);
         transition: transform 500ms;
         .check {
-          height: 40px;
-          width: 40px;
+          height: 30px;
+          width: 30px;
           display: flex;
           justify-self: center;
           align-content: center;
         }
         .fas {
-          display: flex;
-          background: transparent;
-          height: 30px;
-          width: 30px;
-          color: white;
-          transform-origin: 0 0;
           transform: rotate(-360deg);
-          transition: 1000ms;
         }
       }
     }

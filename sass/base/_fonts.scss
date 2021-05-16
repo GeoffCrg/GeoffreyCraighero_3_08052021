@@ -1,20 +1,15 @@
-@font-face {
-  font-family: "roboto-medium";
-  src: url("Roboto-Medium-webfont.eot");
-  src: url("Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"),
-    url("") format("woff2"),
-    url("/fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff") format("woff"),
-    url("/Roboto-Medium-webfont.ttf") format("truetype"),
-    url("Roboto-Medium-webfont.svg#robotomedium") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
 p,
-h1,
+
 h2,
 h3,
 h4,
 button,
 a {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
 }
