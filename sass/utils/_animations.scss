@@ -51,3 +51,12 @@
     transform: translateY(-2em);
   }
 }
+@keyframes scroll-none {
+  from{
+    overflow: hidden;
+  }
+  to{overflow: scroll;
+
+  }
+  
+}

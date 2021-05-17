@@ -38,10 +38,14 @@
       width: 75%;
       height: 20px;
       grid-row: 2;
+      margin-left: 20px;
+      box-shadow: $box-shadow;
     }
     .presentation {
       width: 80%;
       grid-row: 3;
+      margin-left: 20px;
+      box-shadow: $box-shadow;
     }
     .operation {
       width: 80%;
