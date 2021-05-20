@@ -223,6 +223,7 @@ p {
   0% {
     opacity: 1;
     z-index: 20;
+    overflow: hidden;
   }
   55% {
     opacity: 1;
@@ -232,6 +233,7 @@ p {
   100% {
     opacity: 0;
     z-index: -10;
+    overflow: visible;
   }
 }
 
@@ -239,6 +241,7 @@ p {
   0% {
     opacity: 1;
     z-index: 20;
+    overflow: hidden;
   }
   55% {
     opacity: 1;
@@ -248,80 +251,29 @@ p {
   100% {
     opacity: 0;
     z-index: -10;
+    overflow: visible;
   }
 }
 
-@-webkit-keyframes loader_point {
+@-webkit-keyframes loading-rotate {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
-  }
-  30% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  55% {
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
-  }
-  70% {
-    opacity: 0.5;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes loader_point {
+@keyframes loading-rotate {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
-  }
-  30% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  55% {
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
-  }
-  70% {
-    opacity: 0.5;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
-  }
-}
-
-@-webkit-keyframes scroll-none {
-  from {
-    overflow: hidden;
-  }
-  to {
-    overflow: scroll;
-  }
-}
-
-@keyframes scroll-none {
-  from {
-    overflow: hidden;
-  }
-  to {
-    overflow: scroll;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -332,14 +284,9 @@ body {
 }
 
 body .loader {
-  z-index: -10;
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,51 +304,20 @@ body .loader {
           animation-fill-mode: both;
 }
 
-body .loader .container_point {
-  width: 40%;
-  height: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .loader .container_point :nth-child(1) {
-  background: #9356dc;
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-}
-
-body .loader .container_point :nth-child(2) {
-  background: #ff79da;
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-}
-
-body .loader .container_point :nth-child(3) {
-  background: #99e2d0;
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
-}
-
-body .loader .container_point .point {
-  width: 50px;
-  height: 50px;
-  border: 0px solid;
+body .loader .loader-animation {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 10px solid #f7f7f7;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
   border-radius: 50%;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-animation-name: loader_point;
-          animation-name: loader_point;
-  -webkit-animation-duration: 3000ms;
-          animation-duration: 3000ms;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  opacity: 0;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: loading-rotate 3s linear infinite;
+          animation: loading-rotate 3s linear infinite;
 }
 
 .logo {

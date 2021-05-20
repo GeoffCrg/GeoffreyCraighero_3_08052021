@@ -4,15 +4,9 @@ body {
   animation: scroll-none 7500ms;
 
   .loader {
-    z-index: -10;
-
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 100vh;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    height: 100%;
 
     display: flex;
     justify-content: center;
@@ -23,39 +17,23 @@ body {
     opacity: 0;
     animation-fill-mode: both;
 
-    .container_point {
-      width: 40%;
-      height: 15%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      & :nth-child(1) {
-        background: $color-primary;
-        animation-delay: 400ms;
-      }
-      & :nth-child(2) {
-        background: $color-secondary;
-        animation-delay: 800ms;
-      }
-
-      & :nth-child(3) {
-        background: $color-tertiary;
-        animation-delay: 1200ms;
-      }
-      .point {
-        width: 50px;
-        height: 50px;
-        border: 0px solid;
-        border-radius: 50%;
-        transform: translateY(0%);
-        animation-name: loader_point;
-        animation-duration: 3000ms;
-        animation-timing-function: ease-out;
-        opacity: 0;
-      }
+    .loader-animation {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border: 10px solid #f7f7f7;
+      border-top: 10px solid $color-primary;
+      border-bottom: 10px solid $color-secondary;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation: loading-rotate 3s linear infinite;
     }
   }
 }
+
 // --------------------HEADER---------------------
 .logo {
   display: flex;
