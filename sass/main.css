@@ -338,15 +338,15 @@ body .loader .loader-animation {
 
 .location {
   background: #ededed;
-  -webkit-box-shadow: inset 0px 5px 7px 0px #939393;
-          box-shadow: inset 0px 5px 7px 0px #939393;
+  -webkit-box-shadow: inset 1px 1px 3px 5px #dddddd;
+          box-shadow: inset 1px 1px 3px 5px #dddddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .location .fas {
@@ -667,7 +667,7 @@ footer li a .fas {
 .menu a .fas {
   position: absolute;
   font-size: 1.5em;
-  top: 25px;
+  top: 20px;
   left: 20px;
   color: black;
 }
@@ -825,6 +825,7 @@ footer li a .fas {
   overflow: hidden;
   text-align: start;
   line-height: 1;
+  padding-right: 40px;
 }
 
 .menu_part .btn-delay0 .meal_desc,
@@ -837,6 +838,7 @@ footer li a .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   color: grey;
+  padding-right: 40px;
 }
 
 .menu_part .btn-delay0 .price,
@@ -1084,8 +1086,6 @@ footer li a .fas {
     display: flex;
     width: 100%;
     height: 20px;
-    -webkit-box-shadow: 6px 6px 6px 2px rgba(12, 11, 11, 0.2);
-            box-shadow: 6px 6px 6px 2px rgba(12, 11, 11, 0.2);
   }
   header .presentation {
     width: 100%;

@@ -48,10 +48,10 @@ body {
 }
 .location {
   background: #ededed;
-  box-shadow: inset 0px 5px 7px 0px #939393;
+  box-shadow: inset 1px 1px 3px 5px #dddddd;
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 15px 0;
   .fas {
     padding: 0 12px;
   }
