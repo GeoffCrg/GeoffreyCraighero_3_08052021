@@ -278,7 +278,6 @@ p {
 }
 
 body {
-  position: relative;
   -webkit-animation: scroll-none 7500ms;
           animation: scroll-none 7500ms;
 }
@@ -818,7 +817,8 @@ footer li a .fas {
 .menu_part .btn-delay0 .title_meal,
 .menu_part .btn-delay1 .title_meal,
 .menu_part .btn-delay2 .title_meal {
-  margin: 5px 5px 5px 2px;
+  margin: 10px 5px 5px 2px;
+  padding-left: 10px 0 0 0;
   font-weight: 700;
   font-size: 16px;
   text-overflow: ellipsis;
@@ -832,7 +832,7 @@ footer li a .fas {
 .menu_part .btn-delay1 .meal_desc,
 .menu_part .btn-delay2 .meal_desc {
   font-size: 13px;
-  margin: 5px 0px 5px 0;
+  margin: 10px 0px 5px 0;
   text-align: start;
   font-weight: 400;
   text-overflow: ellipsis;
