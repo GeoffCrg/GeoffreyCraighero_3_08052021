@@ -1,3 +1,5 @@
+
+
 @keyframes checked-slide {
   from {
     transform: translateX(0);
@@ -14,6 +16,8 @@
     transform: scale(1);
   }
 }
+
+// --------------loading-----------------
 @keyframes spinner {
   0% {
     opacity: 1;

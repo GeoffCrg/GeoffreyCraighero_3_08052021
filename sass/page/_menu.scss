@@ -1,3 +1,5 @@
+// -----------------HEADER-----------------------
+
 .menu {
   position: relative;
   display: flex;
@@ -19,9 +21,12 @@
     border-top: 6px black solid;
   }
 }
+// ----------------------SECTION-----------------------------
 .header_title {
   margin: 20px 10px;
+  font-size: 1.3em;
 }
+
 .select_menu {
   margin-top: -5rem;
   padding-top: 0.8em;
@@ -35,7 +40,7 @@
   }
   .far {
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 30px;
     font-size: 2em;
     transform: scale(1);
@@ -46,7 +51,7 @@
   }
   .fas {
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 29px;
     color: $color-primary;
     font-size: 2em;
@@ -59,9 +64,6 @@
 
       transform: scale(1.15);
     }
-  }
-  button {
-    background: white;
   }
 }
 
@@ -88,7 +90,9 @@
     animation: menu-slide-down 500ms;
     animation-delay: 400ms;
   }
-  button {
+  .btn-delay0,
+  .btn-delay1,
+  .btn-delay2 {
     display: flex;
     width: 90%;
     height: 70px;
@@ -101,6 +105,8 @@
     overflow: hidden;
     box-shadow: $box-shadow;
     margin-top: 15px;
+    cursor: pointer;
+    background: white;
 
     .menuItem-header {
       display: flex;
@@ -133,12 +139,12 @@
       bottom: 10px;
       display: flex;
       width: 30px;
-      height: 30px;
+      height: 100%;
       justify-items: flex-end;
       align-items: flex-end;
       justify-self: flex-end;
       font-weight: 700;
-
+      font-size: 0.7em;
       background: white;
     }
 
@@ -151,8 +157,7 @@
       right: -80px;
 
       background-color: $color-tertiary;
-      .check {
-      }
+
       .fas {
         display: flex;
         opacity: 1;
@@ -163,7 +168,7 @@
         transition: transform 600ms ease;
         transition-delay: 100ms;
 
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
       .fa-check-circle {
         width: 30px;
@@ -229,6 +234,8 @@
     }
   }
 }
+
+// -------------------FOOTER--------------------------
 footer {
   height: 200px;
   background: #49464f;
@@ -237,11 +244,11 @@ footer {
   h1 {
     color: whitesmoke;
     font-weight: 800;
-    margin: 0.8em 0.8em;
+    margin: 0.4em 0.8em;
   }
   li {
-    margin: 0.7em 0.8em;
-    font-size: 1.1em;
+    margin: 0.5em 0.8em;
+    font-size: 1em;
     a {
       text-decoration: none;
       color: honeydew;

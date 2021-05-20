@@ -1,5 +1,5 @@
 @mixin lighten-btn($color: $color-primary $color-secondary) {
   filter: brightness(100%);
   transform: scale(1.1);
-  box-shadow: 6px 6px 6px 6px rgba (32, 32, 32, 0.2);
+  box-shadow: 6px 6px 6px 6px;
 }
