@@ -1,7 +1,5 @@
 @media screen and (min-width: 850px) and (max-width: 1100px) {
-  .logo {
-    box-shadow: none;
-  }
+
 
   .menu_card {
     height: 400px;
@@ -36,12 +34,7 @@
   }
 
   header {
-    justify-content: center;
-    .logo {
-      width: 100%;
-      grid-column: 1 / span 2;
-      box-shadow: none;
-    }
+
 
     .location {
       display: flex;

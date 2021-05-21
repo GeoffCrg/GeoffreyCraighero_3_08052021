@@ -14,12 +14,17 @@ h4 {
   font-size: 1.3em;
   padding-left: 10px;
 }
+
+// title underline
 h4::after {
   content: " ";
   display: block;
   width: 30px;
   height: 3px;
   background: #99e2d0;
+}
+h5{
+  font-size: 1.6em;
 }
 p {
   font-size: 1em;
