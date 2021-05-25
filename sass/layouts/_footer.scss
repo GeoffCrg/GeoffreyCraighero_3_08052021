@@ -1,0 +1,22 @@
+footer {
+  height: 200px;
+  background: #49464f;
+  display: flex;
+  flex-direction: column;
+  h5 {
+    color: whitesmoke;
+    font-weight: 800;
+    margin: 0.4em 0.8em;
+  }
+  li {
+    margin: 0.5em 0.8em;
+    font-size: 1em;
+    a {
+      text-decoration: none;
+      color: honeydew;
+      .fas {
+        margin-right: 5px;
+      }
+    }
+  }
+}

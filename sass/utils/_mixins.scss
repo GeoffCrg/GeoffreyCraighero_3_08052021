@@ -1,5 +1,11 @@
 @mixin lighten-btn($color: $color-primary $color-secondary) {
-  filter: brightness(100%);
-  transform: scale(1.1);
-  box-shadow: 6px 6px 6px 6px;
+  filter: brightness(110%);
+  transform: scale(1.05);
+  box-shadow: 6px 6px 6px 2px grey;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
